@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     
     override func loadView() {
         super.loadView()
-               
+        
         scrollView = UIScrollView()
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         scrollView.isPagingEnabled = true
@@ -127,6 +127,15 @@ class ViewController: UIViewController {
         view.addConstraint(NSLayoutConstraint(item: surveyImage, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 190))
         view.addConstraint(NSLayoutConstraint(item: identityImage, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 220))
         view.addConstraint(NSLayoutConstraint(item: identityImage, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 190))
+        
+        let pageControl = UIPageControl()
+        pageControl.frame = CGRect(x: container.center.x, y: view.center.y+200, width: 300, height: 300)
+        pageControl.numberOfPages = 3
+        pageControl.currentPage = 0
+        view.addSubview(pageControl)
+        
+        pageControl.pageIndicatorTintColor = UIColor.purple
+        pageControl.currentPageIndicatorTintColor = UIColor.systemPurple
         
     }
 
