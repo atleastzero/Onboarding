@@ -20,9 +20,9 @@ class ViewController: UIViewController {
     let surveyLabel: UILabel = UILabel()
     let identityLabel: UILabel = UILabel()
     
-    let selfieImage = UIImageView(image: UIImage(contentsOfFile: "selfie_image.png"))
-    let surveyImage = UIImageView(image: UIImage(contentsOfFile: "survey_image.png"))
-    let identityImage = UIImageView(image: UIImage(contentsOfFile: "identity_image.png"))
+    let selfieImage = UIImageView()
+    let surveyImage = UIImageView()
+    let identityImage = UIImageView()
     
     override func loadView() {
         super.loadView()
@@ -92,6 +92,16 @@ class ViewController: UIViewController {
         view.addConstraint(NSLayoutConstraint(item: identityLabel, attribute: .centerX, relatedBy: .equal, toItem: selfieView, attribute: .centerX, multiplier: 5.0, constant: 0.0))
         view.addConstraint(NSLayoutConstraint(item: identityLabel, attribute: .centerY, relatedBy: .equal, toItem: selfieView, attribute: .centerY, multiplier: 1.0, constant: 150.0))
         
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        
+        selfieImage.image = UIImage(named: "selfie_image")
+        surveyImage.image = UIImage(named: "survey_image")
+        identityImage.image = UIImage(named: "identity_image")
+        
         selfieImage.translatesAutoresizingMaskIntoConstraints = false
         surveyImage.translatesAutoresizingMaskIntoConstraints = false
         identityImage.translatesAutoresizingMaskIntoConstraints = false
@@ -100,25 +110,23 @@ class ViewController: UIViewController {
         surveyView.addSubview(surveyImage)
         identityView.addSubview(identityImage)
         
-//        view.addConstraint(NSLayoutConstraint(item: selfieImage, attribute: .centerX, relatedBy: .equal, toItem: selfieView, attribute: .centerX, multiplier: 1.0, constant: 0.0))
-//        view.addConstraint(NSLayoutConstraint(item: selfieImage, attribute: .centerY, relatedBy: .equal, toItem: selfieView, attribute: .centerY, multiplier: 1.0, constant: 150.0))
-//        view.addConstraint(NSLayoutConstraint(item: surveyImage, attribute: .centerX, relatedBy: .equal, toItem: surveyView, attribute: .centerX, multiplier: 3.0, constant: 0.0))
-//        view.addConstraint(NSLayoutConstraint(item: surveyImage, attribute: .centerY, relatedBy: .equal, toItem: surveyView, attribute: .centerY, multiplier: 1.0, constant: 150.0))
-//        view.addConstraint(NSLayoutConstraint(item: identityImage, attribute: .centerX, relatedBy: .equal, toItem: identityView, attribute: .centerX, multiplier: 5.0, constant: 0.0))
-//        view.addConstraint(NSLayoutConstraint(item: identityImage, attribute: .centerY, relatedBy: .equal, toItem: identityView, attribute: .centerY, multiplier: 1.0, constant: 150.0))
-//
-//        view.addConstraint(NSLayoutConstraint(item: selfieImage, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 55))
-//        view.addConstraint(NSLayoutConstraint(item: selfieImage, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 45))
-//        view.addConstraint(NSLayoutConstraint(item: surveyImage, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 55))
-//        view.addConstraint(NSLayoutConstraint(item: surveyImage, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 45))
-//        view.addConstraint(NSLayoutConstraint(item: identityImage, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 55))
-//        view.addConstraint(NSLayoutConstraint(item: identityImage, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 45))
+        selfieView.bringSubviewToFront(selfieImage)
+        surveyView.bringSubviewToFront(surveyImage)
+        identityView.bringSubviewToFront(identityImage)
         
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        view.addConstraint(NSLayoutConstraint(item: selfieImage, attribute: .centerX, relatedBy: .equal, toItem: selfieView, attribute: .centerX, multiplier: 1.0, constant: 0.0))
+        view.addConstraint(NSLayoutConstraint(item: selfieImage, attribute: .centerY, relatedBy: .equal, toItem: selfieView, attribute: .centerY, multiplier: 1.0, constant: -150.0))
+        view.addConstraint(NSLayoutConstraint(item: surveyImage, attribute: .centerX, relatedBy: .equal, toItem: surveyView, attribute: .centerX, multiplier: 1.0, constant: 0.0))
+        view.addConstraint(NSLayoutConstraint(item: surveyImage, attribute: .centerY, relatedBy: .equal, toItem: surveyView, attribute: .centerY, multiplier: 1.0, constant: -150.0))
+        view.addConstraint(NSLayoutConstraint(item: identityImage, attribute: .centerX, relatedBy: .equal, toItem: identityView, attribute: .centerX, multiplier: 1.0, constant: 0.0))
+        view.addConstraint(NSLayoutConstraint(item: identityImage, attribute: .centerY, relatedBy: .equal, toItem: identityView, attribute: .centerY, multiplier: 1.0, constant: -150.0))
+        
+        view.addConstraint(NSLayoutConstraint(item: selfieImage, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 220))
+        view.addConstraint(NSLayoutConstraint(item: selfieImage, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 190))
+        view.addConstraint(NSLayoutConstraint(item: surveyImage, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 220))
+        view.addConstraint(NSLayoutConstraint(item: surveyImage, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 190))
+        view.addConstraint(NSLayoutConstraint(item: identityImage, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 220))
+        view.addConstraint(NSLayoutConstraint(item: identityImage, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 190))
         
     }
 
