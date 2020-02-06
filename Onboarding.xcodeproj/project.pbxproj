@@ -13,6 +13,7 @@
 		BC8FD6FD23E7BFAB00E9AFC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC8FD6FB23E7BFAB00E9AFC1 /* Main.storyboard */; };
 		BC8FD6FF23E7BFAC00E9AFC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC8FD6FE23E7BFAC00E9AFC1 /* Assets.xcassets */; };
 		BC8FD70223E7BFAD00E9AFC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC8FD70023E7BFAD00E9AFC1 /* LaunchScreen.storyboard */; };
+		BCE3D29123ECA87C00FE7E4F /* OnboardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE3D29023ECA87C00FE7E4F /* OnboardingPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		BC8FD6FE23E7BFAC00E9AFC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC8FD70123E7BFAD00E9AFC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC8FD70323E7BFAD00E9AFC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCE3D29023ECA87C00FE7E4F /* OnboardingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,12 +59,13 @@
 			isa = PBXGroup;
 			children = (
 				BC8FD6F523E7BFAB00E9AFC1 /* AppDelegate.swift */,
-				BC8FD6F723E7BFAB00E9AFC1 /* SceneDelegate.swift */,
+				BCE3D29023ECA87C00FE7E4F /* OnboardingPage.swift */,
 				BC8FD6F923E7BFAB00E9AFC1 /* ViewController.swift */,
-				BC8FD6FB23E7BFAB00E9AFC1 /* Main.storyboard */,
 				BC8FD6FE23E7BFAC00E9AFC1 /* Assets.xcassets */,
 				BC8FD70023E7BFAD00E9AFC1 /* LaunchScreen.storyboard */,
+				BC8FD6F723E7BFAB00E9AFC1 /* SceneDelegate.swift */,
 				BC8FD70323E7BFAD00E9AFC1 /* Info.plist */,
+				BC8FD6FB23E7BFAB00E9AFC1 /* Main.storyboard */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 				BC8FD6FA23E7BFAB00E9AFC1 /* ViewController.swift in Sources */,
 				BC8FD6F623E7BFAB00E9AFC1 /* AppDelegate.swift in Sources */,
 				BC8FD6F823E7BFAB00E9AFC1 /* SceneDelegate.swift in Sources */,
+				BCE3D29123ECA87C00FE7E4F /* OnboardingPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
