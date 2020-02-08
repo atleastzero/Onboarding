@@ -76,5 +76,24 @@ class OnboardingPage: UIView {
         stackView.heightAnchor.constraint(equalTo: self.layoutMarginsGuide.heightAnchor, multiplier: 0.5).isActive = true
         stackView.centerXAnchor.constraint(equalTo: self.layoutMarginsGuide.centerXAnchor).isActive = true
         stackView.centerYAnchor.constraint(equalTo: self.layoutMarginsGuide.centerYAnchor).isActive = true
+    
+        imageView.image = UIImage(named: self.imageName)
+        self.addSubview(imageView)
+        imageView.heightAnchor.constraint(equalTo: stackView.heightAnchor, multiplier: 0.6).isActive = true
+        
+        messageLabel.text = message
+        self.addSubview(messageLabel)
+        
+        stackView.addArrangedSubview(imageView)
+        stackView.addArrangedSubview(messageLabel)
+        
+        if isLastPage {
+            self.addSubview(continueButton)
+//            self.bringSubviewToFront(continueButton)
+            continueButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 40).isActive = true
+            continueButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -40).isActive = true
+            continueButton.topAnchor.constraint(equalTo: stackView.bottomAnchor).isActive = true
+            continueButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        }
     }
 }

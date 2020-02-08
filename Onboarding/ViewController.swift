@@ -14,13 +14,16 @@ class ViewController: UIViewController {
     var container: UIStackView!
     var pageControl: UIPageControl!
 
-    let selfieView: UIView = UIView()
-    let surveyView: UIView = UIView()
-    let identityView: UIView = UIView()
+    var selfieView: OnboardingPage!
+    var surveyView: OnboardingPage!
+    var identityView: OnboardingPage!
+    var pagesArray: [OnboardingPage] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupScrollView()
+        setViews()
+        setPageControl()
     }
     
     func setupScrollView() {
@@ -29,7 +32,7 @@ class ViewController: UIViewController {
 
         scrollView.isPagingEnabled = true
         scrollView.showsHorizontalScrollIndicator = false
-        scrollView.delegate = self as? UIScrollViewDelegate
+        scrollView.delegate = self as UIScrollViewDelegate
         view.addSubview(scrollView)
         
         container = UIStackView()
@@ -39,9 +42,6 @@ class ViewController: UIViewController {
         container.distribution = .fillEqually
         
         scrollView.addSubview(container)
-        container.addArrangedSubview(selfieView)
-        container.addArrangedSubview(surveyView)
-        container.addArrangedSubview(identityView)
         
         scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
@@ -54,19 +54,31 @@ class ViewController: UIViewController {
         container.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor).isActive = true
         container.heightAnchor.constraint(equalTo: scrollView.heightAnchor).isActive = true
         
-        selfieView.widthAnchor.constraint(equalToConstant: view.frame.size.width).isActive = true
+//        selfieView.widthAnchor.constraint(equalToConstant: view.frame.size.width).isActive = true
 //        surveyView.widthAnchor.constraint(equalToConstant: view.frame.size.width).isActive = true
 //        identityView.widthAnchor.constraint(equalToConstant: view.frame.size.width).isActive = true
         
-        selfieView.backgroundColor = .cyan
-        surveyView.backgroundColor = .brown
-        identityView.backgroundColor = .gray
+//        selfieView.backgroundColor = .cyan
+//        surveyView.backgroundColor = .brown
+//        identityView.backgroundColor = .gray
+    }
+    
+    func setViews(){
+        selfieView = OnboardingPage(message: "Upload some selfies...", imageName: "selfie_image", isLastPage: false, color: .cyan)
+        surveyView = OnboardingPage(message: "Take a quick survey...", imageName: "survey_image", isLastPage: false, color: .orange)
+        identityView = OnboardingPage(message: "Assume your new identity!", imageName: "identity_image", isLastPage: false, color: .gray)
         
+        pagesArray = [selfieView, surveyView, identityView]
+        
+        for page in pagesArray{
+            container.addArrangedSubview(page)
+            page.widthAnchor.constraint(equalToConstant: view.frame.size.width).isActive = true
+        }
+    }
+    
+    func setPageControl() {
         pageControl = UIPageControl()
         
-        view.addSubview(pageControl)
-        
-        pageControl.numberOfPages = 3
         pageControl.currentPage = 0
         
         pageControl.pageIndicatorTintColor = UIColor.purple
@@ -74,41 +86,46 @@ class ViewController: UIViewController {
         
         pageControl.translatesAutoresizingMaskIntoConstraints = false
         
+        pageControl.isUserInteractionEnabled = false
+        
+        view.addSubview(pageControl)
+        view.bringSubviewToFront(pageControl)
+        
         pageControl.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -40).isActive = true
         pageControl.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        
+        pageControl.heightAnchor.constraint(equalToConstant: 50).isActive = true
     }
     
-    func createView(currentView: UIView, imageName: String, text: String, isLastPage: Bool, color: UIColor) {
-        
-        let stackView = UIStackView()
-        stackView.axis = .vertical
-        stackView.spacing = 20
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.distribution = .fill
-        
-        currentView.addSubview(stackView)
-        
-        stackView.widthAnchor.constraint(equalTo: currentView.layoutMarginsGuide.widthAnchor, multiplier: 0.65).isActive = true
-        stackView.heightAnchor.constraint(equalTo: currentView.layoutMarginsGuide.heightAnchor, multiplier: 0.5).isActive = true
-        stackView.centerXAnchor.constraint(equalTo: currentView.layoutMarginsGuide.centerXAnchor).isActive = true
-        stackView.centerYAnchor.constraint(equalTo: currentView.layoutMarginsGuide.centerYAnchor).isActive = true
-        
-        let imageView = UIImageView(image: UIImage(named: imageName))
-        imageView.contentMode = .scaleAspectFit
-        stackView.addArrangedSubview(imageView)
-        
-        imageView.heightAnchor.constraint(equalTo: stackView.heightAnchor, multiplier: 0.6).isActive = true
-        
-        let message = UILabel()
-        message.numberOfLines = 0
-        message.textAlignment = .center
-        message.text = text
-        message.textColor = .purple
-        message.font = UIFont(name: "American Typewriter", size: 20)
-
-        currentView.backgroundColor = color
-    }
+//    func createView(currentView: UIView, imageName: String, text: String, isLastPage: Bool, color: UIColor) {
+//
+//        let stackView = UIStackView()
+//        stackView.axis = .vertical
+//        stackView.spacing = 20
+//        stackView.translatesAutoresizingMaskIntoConstraints = false
+//        stackView.distribution = .fill
+//
+//        currentView.addSubview(stackView)
+//
+//        stackView.widthAnchor.constraint(equalTo: currentView.layoutMarginsGuide.widthAnchor, multiplier: 0.65).isActive = true
+//        stackView.heightAnchor.constraint(equalTo: currentView.layoutMarginsGuide.heightAnchor, multiplier: 0.5).isActive = true
+//        stackView.centerXAnchor.constraint(equalTo: currentView.layoutMarginsGuide.centerXAnchor).isActive = true
+//        stackView.centerYAnchor.constraint(equalTo: currentView.layoutMarginsGuide.centerYAnchor).isActive = true
+//
+//        let imageView = UIImageView(image: UIImage(named: imageName))
+//        imageView.contentMode = .scaleAspectFit
+//        stackView.addArrangedSubview(imageView)
+//
+//        imageView.heightAnchor.constraint(equalTo: stackView.heightAnchor, multiplier: 0.6).isActive = true
+//
+//        let message = UILabel()
+//        message.numberOfLines = 0
+//        message.textAlignment = .center
+//        message.text = text
+//        message.textColor = .purple
+//        message.font = UIFont(name: "American Typewriter", size: 20)
+//
+//        currentView.backgroundColor = color
+//    }
     
 //
     
@@ -156,3 +173,9 @@ class ViewController: UIViewController {
 
 }
 
+extension ViewController: UIScrollViewDelegate{
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let pageNumber = round(scrollView.contentOffset.x / scrollView.frame.size.width)
+        pageControl.currentPage = Int(pageNumber)
+    }
+}
