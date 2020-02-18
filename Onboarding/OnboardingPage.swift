@@ -43,7 +43,7 @@ class OnboardingPage: UIView {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Subscribe Now", for: .normal)
-        button.setTitleColor(UIColor.darkGray, for: .normal)
+        button.setTitleColor(UIColor.white, for: .normal)
         button.layer.cornerRadius = 10
         button.layer.masksToBounds = true
         button.backgroundColor = .purple

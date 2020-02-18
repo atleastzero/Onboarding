@@ -32,7 +32,7 @@ class ViewController: UIViewController {
 
         scrollView.isPagingEnabled = true
         scrollView.showsHorizontalScrollIndicator = false
-        scrollView.delegate = self as UIScrollViewDelegate
+        scrollView.delegate = self
         view.addSubview(scrollView)
         
         container = UIStackView()
@@ -66,7 +66,7 @@ class ViewController: UIViewController {
     func setViews(){
         selfieView = OnboardingPage(message: "Upload some selfies...", imageName: "selfie_image", isLastPage: false, color: .cyan)
         surveyView = OnboardingPage(message: "Take a quick survey...", imageName: "survey_image", isLastPage: false, color: .orange)
-        identityView = OnboardingPage(message: "Assume your new identity!", imageName: "identity_image", isLastPage: false, color: .gray)
+        identityView = OnboardingPage(message: "Assume your new identity!", imageName: "identity_image", isLastPage: true, color: .gray)
         
         pagesArray = [selfieView, surveyView, identityView]
         
