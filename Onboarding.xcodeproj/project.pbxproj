@@ -10,6 +10,9 @@
 		BC121C4423F31FFB00F094F2 /* BoxContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC121C4323F31FFB00F094F2 /* BoxContents.swift */; };
 		BC12E4C323FC63D2003056AB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC12E4C223FC63D2003056AB /* LoginViewController.swift */; };
 		BC12E4C523FC7268003056AB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC12E4C423FC7268003056AB /* HomeViewController.swift */; };
+		BC1D48D324039B1300ED2DAD /* NewBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1D48D224039B1300ED2DAD /* NewBoxViewController.swift */; };
+		BC5776642403A00500EFD107 /* OldBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5776632403A00500EFD107 /* OldBoxViewController.swift */; };
+		BC5776662403A01000EFD107 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5776652403A01000EFD107 /* ProfileViewController.swift */; };
 		BC8FD6F623E7BFAB00E9AFC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8FD6F523E7BFAB00E9AFC1 /* AppDelegate.swift */; };
 		BC8FD6F823E7BFAB00E9AFC1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8FD6F723E7BFAB00E9AFC1 /* SceneDelegate.swift */; };
 		BC8FD6FA23E7BFAB00E9AFC1 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8FD6F923E7BFAB00E9AFC1 /* OnboardingViewController.swift */; };
@@ -21,6 +24,9 @@
 		BC121C4323F31FFB00F094F2 /* BoxContents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxContents.swift; sourceTree = "<group>"; };
 		BC12E4C223FC63D2003056AB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BC12E4C423FC7268003056AB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		BC1D48D224039B1300ED2DAD /* NewBoxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBoxViewController.swift; sourceTree = "<group>"; };
+		BC5776632403A00500EFD107 /* OldBoxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldBoxViewController.swift; sourceTree = "<group>"; };
+		BC5776652403A01000EFD107 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		BC8FD6F223E7BFAB00E9AFC1 /* Onboarding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Onboarding.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC8FD6F523E7BFAB00E9AFC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC8FD6F723E7BFAB00E9AFC1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +69,9 @@
 				BC8FD6F923E7BFAB00E9AFC1 /* OnboardingViewController.swift */,
 				BC12E4C223FC63D2003056AB /* LoginViewController.swift */,
 				BC12E4C423FC7268003056AB /* HomeViewController.swift */,
+				BC1D48D224039B1300ED2DAD /* NewBoxViewController.swift */,
+				BC5776632403A00500EFD107 /* OldBoxViewController.swift */,
+				BC5776652403A01000EFD107 /* ProfileViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -166,13 +175,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC5776642403A00500EFD107 /* OldBoxViewController.swift in Sources */,
 				BC12E4C323FC63D2003056AB /* LoginViewController.swift in Sources */,
+				BC5776662403A01000EFD107 /* ProfileViewController.swift in Sources */,
 				BC8FD6FA23E7BFAB00E9AFC1 /* OnboardingViewController.swift in Sources */,
 				BC8FD6F623E7BFAB00E9AFC1 /* AppDelegate.swift in Sources */,
 				BC8FD6F823E7BFAB00E9AFC1 /* SceneDelegate.swift in Sources */,
 				BCE3D29123ECA87C00FE7E4F /* OnboardingPage.swift in Sources */,
 				BC12E4C523FC7268003056AB /* HomeViewController.swift in Sources */,
 				BC121C4423F31FFB00F094F2 /* BoxContents.swift in Sources */,
+				BC1D48D324039B1300ED2DAD /* NewBoxViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,7 +13,7 @@ class HomeViewController: UIViewController {
     let newBoxButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Login", for: .normal)
+        button.setTitle("New Box", for: .normal)
         button.setTitleColor(UIColor.black, for: .normal)
         button.layer.cornerRadius = 10
         button.layer.masksToBounds = true
@@ -25,7 +25,7 @@ class HomeViewController: UIViewController {
     let oldBoxButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Login", for: .normal)
+        button.setTitle("Old Boxes", for: .normal)
         button.setTitleColor(UIColor.black, for: .normal)
         button.layer.cornerRadius = 10
         button.layer.masksToBounds = true
@@ -37,7 +37,7 @@ class HomeViewController: UIViewController {
     let profileButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Login", for: .normal)
+        button.setTitle("Profile", for: .normal)
         button.setTitleColor(UIColor.black, for: .normal)
         button.layer.cornerRadius = 10
         button.layer.masksToBounds = true
@@ -62,6 +62,7 @@ class HomeViewController: UIViewController {
         
         view.backgroundColor = .blue
         
+        view.addSubview(stackView)
         setupStackView()
         
     }
@@ -75,18 +76,20 @@ class HomeViewController: UIViewController {
         stackView.addArrangedSubview(newBoxButton)
         stackView.addArrangedSubview(oldBoxButton)
         stackView.addArrangedSubview(profileButton)
+        
+        stackView.distribution = .equalSpacing
     }
     
     @objc func goNewBox() {
-        present(NewBoxViewController, animated: true)
+    self.navigationController?.pushViewController(NewBoxViewController(), animated: true)
     }
-    
+
     @objc func goOldBox() {
-        present(OldBoxViewController, animated: true)
+    self.navigationController?.pushViewController(OldBoxViewController(), animated: true)
     }
     
     @objc func goProfile() {
-        present(ProfileViewController, animated: true)
+    self.navigationController?.pushViewController(ProfileViewController(), animated: true)
     }
 }
 
