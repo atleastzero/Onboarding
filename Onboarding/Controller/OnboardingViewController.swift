@@ -24,6 +24,12 @@ class OnboardingViewController: UIViewController {
         setupScrollView()
         setViews()
         setPageControl()
+       
+        identityView.continueButton.addTarget(self, action: #selector(goToLogin), for: .touchUpInside)
+    }
+    
+    @objc func goToLogin() {
+        self.view.window!.rootViewController = LoginViewController()
     }
     
     func setupScrollView() {

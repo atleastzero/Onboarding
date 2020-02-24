@@ -49,7 +49,7 @@ class OnboardingPage: UIView {
         button.backgroundColor = .purple
         return button
     }()
-
+    
     required init(message: String, imageName: String, isLastPage: Bool, color: UIColor) {
         super.init(frame: .zero)
         self.message = message
@@ -96,4 +96,5 @@ class OnboardingPage: UIView {
             continueButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
         }
     }
+    
 }
