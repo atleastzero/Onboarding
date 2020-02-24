@@ -78,6 +78,15 @@ class HomeViewController: UIViewController {
         stackView.addArrangedSubview(profileButton)
         
         stackView.distribution = .equalSpacing
+        
+        newBoxButton.heightAnchor.constraint(equalTo: stackView.heightAnchor, multiplier: 0.3).isActive = true
+        newBoxButton.widthAnchor.constraint(equalTo: stackView.widthAnchor, multiplier: 1.0).isActive = true
+        
+        newBoxButton.heightAnchor.constraint(equalTo: oldBoxButton.heightAnchor, multiplier: 1.0).isActive = true
+        oldBoxButton.heightAnchor.constraint(equalTo: profileButton.heightAnchor, multiplier: 1.0).isActive = true
+        
+        newBoxButton.widthAnchor.constraint(equalTo: oldBoxButton.widthAnchor, multiplier: 1.0).isActive = true
+        oldBoxButton.widthAnchor.constraint(equalTo: profileButton.widthAnchor, multiplier: 1.0).isActive = true
     }
     
     @objc func goNewBox() {
