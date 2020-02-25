@@ -20,6 +20,10 @@
 		BC8FD6FA23E7BFAB00E9AFC1 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8FD6F923E7BFAB00E9AFC1 /* OnboardingViewController.swift */; };
 		BC8FD6FF23E7BFAC00E9AFC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC8FD6FE23E7BFAC00E9AFC1 /* Assets.xcassets */; };
 		BCE3D29123ECA87C00FE7E4F /* OnboardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE3D29023ECA87C00FE7E4F /* OnboardingPage.swift */; };
+		BCF797D22404F35F00B29699 /* NewHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF797D12404F35F00B29699 /* NewHomeViewController.swift */; };
+		BCF797D42404F38500B29699 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF797D32404F38500B29699 /* Section.swift */; };
+		BCF797D62404F40300B29699 /* TitleSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF797D52404F40300B29699 /* TitleSection.swift */; };
+		BCF797D82404F44B00B29699 /* TitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF797D72404F44B00B29699 /* TitleCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +42,10 @@
 		BC8FD6FE23E7BFAC00E9AFC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC8FD70323E7BFAD00E9AFC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCE3D29023ECA87C00FE7E4F /* OnboardingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPage.swift; sourceTree = "<group>"; };
+		BCF797D12404F35F00B29699 /* NewHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHomeViewController.swift; sourceTree = "<group>"; };
+		BCF797D32404F38500B29699 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		BCF797D52404F40300B29699 /* TitleSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSection.swift; sourceTree = "<group>"; };
+		BCF797D72404F44B00B29699 /* TitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +71,9 @@
 			isa = PBXGroup;
 			children = (
 				BCE3D29023ECA87C00FE7E4F /* OnboardingPage.swift */,
+				BCF797D52404F40300B29699 /* TitleSection.swift */,
+				BCF797D32404F38500B29699 /* Section.swift */,
+				BCF797D72404F44B00B29699 /* TitleCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -75,9 +86,10 @@
 				BC12E4C423FC7268003056AB /* HomeViewController.swift */,
 				BC1D48D224039B1300ED2DAD /* NewBoxViewController.swift */,
 				BC5776632403A00500EFD107 /* OldBoxViewController.swift */,
-				BC5776672403A3F000EFD107 /* MonthCell.swift */,
 				BC5776652403A01000EFD107 /* ProfileViewController.swift */,
 				BC5776692403AB2C00EFD107 /* MonthViewController.swift */,
+				BCF797D12404F35F00B29699 /* NewHomeViewController.swift */,
+				BCF797D02404F32600B29699 /* Cells */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -110,6 +122,14 @@
 				BC8FD70323E7BFAD00E9AFC1 /* Info.plist */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		BCF797D02404F32600B29699 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				BC5776672403A3F000EFD107 /* MonthCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,9 +201,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCF797D62404F40300B29699 /* TitleSection.swift in Sources */,
 				BC5776642403A00500EFD107 /* OldBoxViewController.swift in Sources */,
 				BC5776682403A3F000EFD107 /* MonthCell.swift in Sources */,
 				BC12E4C323FC63D2003056AB /* LoginViewController.swift in Sources */,
+				BCF797D42404F38500B29699 /* Section.swift in Sources */,
 				BC5776662403A01000EFD107 /* ProfileViewController.swift in Sources */,
 				BC8FD6FA23E7BFAB00E9AFC1 /* OnboardingViewController.swift in Sources */,
 				BC57766A2403AB2C00EFD107 /* MonthViewController.swift in Sources */,
@@ -191,7 +213,9 @@
 				BC8FD6F823E7BFAB00E9AFC1 /* SceneDelegate.swift in Sources */,
 				BCE3D29123ECA87C00FE7E4F /* OnboardingPage.swift in Sources */,
 				BC12E4C523FC7268003056AB /* HomeViewController.swift in Sources */,
+				BCF797D82404F44B00B29699 /* TitleCell.swift in Sources */,
 				BC121C4423F31FFB00F094F2 /* BoxContents.swift in Sources */,
+				BCF797D22404F35F00B29699 /* NewHomeViewController.swift in Sources */,
 				BC1D48D324039B1300ED2DAD /* NewBoxViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

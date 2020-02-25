@@ -98,7 +98,7 @@ class HomeViewController: UIViewController {
     }
     
     @objc func goProfile() {
-    self.navigationController?.pushViewController(ProfileViewController(), animated: true)
+    self.navigationController?.pushViewController(NewHomeViewController(), animated: true)
     }
 }
 
