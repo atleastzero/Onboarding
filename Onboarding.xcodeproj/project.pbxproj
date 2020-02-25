@@ -24,6 +24,7 @@
 		BCF797D42404F38500B29699 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF797D32404F38500B29699 /* Section.swift */; };
 		BCF797D62404F40300B29699 /* TitleSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF797D52404F40300B29699 /* TitleSection.swift */; };
 		BCF797D82404F44B00B29699 /* TitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF797D72404F44B00B29699 /* TitleCell.swift */; };
+		BCF797DA2405A47900B29699 /* SimpleTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF797D92405A47900B29699 /* SimpleTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		BCF797D32404F38500B29699 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		BCF797D52404F40300B29699 /* TitleSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSection.swift; sourceTree = "<group>"; };
 		BCF797D72404F44B00B29699 /* TitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCell.swift; sourceTree = "<group>"; };
+		BCF797D92405A47900B29699 /* SimpleTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 			children = (
 				BC8FD6F923E7BFAB00E9AFC1 /* OnboardingViewController.swift */,
 				BC12E4C223FC63D2003056AB /* LoginViewController.swift */,
+				BCF797D92405A47900B29699 /* SimpleTextField.swift */,
 				BC12E4C423FC7268003056AB /* HomeViewController.swift */,
 				BC1D48D224039B1300ED2DAD /* NewBoxViewController.swift */,
 				BC5776632403A00500EFD107 /* OldBoxViewController.swift */,
@@ -210,6 +213,7 @@
 				BC8FD6FA23E7BFAB00E9AFC1 /* OnboardingViewController.swift in Sources */,
 				BC57766A2403AB2C00EFD107 /* MonthViewController.swift in Sources */,
 				BC8FD6F623E7BFAB00E9AFC1 /* AppDelegate.swift in Sources */,
+				BCF797DA2405A47900B29699 /* SimpleTextField.swift in Sources */,
 				BC8FD6F823E7BFAB00E9AFC1 /* SceneDelegate.swift in Sources */,
 				BCE3D29123ECA87C00FE7E4F /* OnboardingPage.swift in Sources */,
 				BC12E4C523FC7268003056AB /* HomeViewController.swift in Sources */,

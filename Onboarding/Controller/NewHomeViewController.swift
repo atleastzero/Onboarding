@@ -10,7 +10,7 @@ import UIKit
 
 class NewHomeViewController: UIViewController {
 
-    let collectionView:UICollectionView = {
+    let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
