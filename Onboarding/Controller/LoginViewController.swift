@@ -50,7 +50,6 @@ class LoginViewController: UIViewController {
         button.layer.cornerRadius = 10
         button.layer.masksToBounds = true
         button.backgroundColor = .white
-        button.addTarget(self, action: #selector(goHome), for: .touchUpInside)
         return button
     }()
     
@@ -68,7 +67,7 @@ class LoginViewController: UIViewController {
         
         view.backgroundColor = .blue
         
-        view.addSubview(stackView)
+//        view.addSubview(stackView)
         setupStackView()
     }
     
@@ -80,6 +79,8 @@ class LoginViewController: UIViewController {
             self.view.layoutIfNeeded()
             self.appNameLabel.transform = CGAffineTransform(scaleX: 1, y: 1)
         }
+        
+        loginButton.addTarget(self, action: #selector(goHome), for: .touchUpInside)
     }
     
     func setupStackView() {
@@ -98,12 +99,12 @@ class LoginViewController: UIViewController {
         titleConstraintEnd =  appNameLabel.centerYAnchor.constraint(equalTo: mainImage.topAnchor, constant: -60)
         appNameLabel.widthAnchor.constraint(equalTo: self.view.widthAnchor).isActive = true
         appNameLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        appNameLabel.transform = CGAffineTransform(scaleX: 0, y: 0)
     
         self.view.addSubview(loginButton)
         loginButton.widthAnchor.constraint(equalToConstant: 250).isActive = true
         loginButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
         loginButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -60).isActive = true
-        appNameLabel.transform = CGAffineTransform(scaleX: 0, y: 0)
         loginButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
         loginButton.addTarget(self, action: #selector(goHome), for: .touchUpInside)
     
