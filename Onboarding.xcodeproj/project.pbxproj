@@ -31,6 +31,9 @@
 		BCF01551240B45F2001E6F28 /* FavoritesSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF01550240B45F2001E6F28 /* FavoritesSection.swift */; };
 		BCF01554240B4600001E6F28 /* FavoritesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCF01552240B4600001E6F28 /* FavoritesCell.xib */; };
 		BCF01555240B4600001E6F28 /* FavoritesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF01553240B4600001E6F28 /* FavoritesCell.swift */; };
+		BCF01558240B4B2E001E6F28 /* GridCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCF01556240B4B2E001E6F28 /* GridCell.xib */; };
+		BCF01559240B4B2E001E6F28 /* GridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF01557240B4B2E001E6F28 /* GridCell.swift */; };
+		BCF0155B240B4B3C001E6F28 /* CategoriesSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF0155A240B4B3C001E6F28 /* CategoriesSection.swift */; };
 		BCF797D22404F35F00B29699 /* NewHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF797D12404F35F00B29699 /* NewHomeViewController.swift */; };
 		BCF797D42404F38500B29699 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF797D32404F38500B29699 /* Section.swift */; };
 		BCF797D62404F40300B29699 /* TitleSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF797D52404F40300B29699 /* TitleSection.swift */; };
@@ -64,6 +67,9 @@
 		BCF01550240B45F2001E6F28 /* FavoritesSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesSection.swift; sourceTree = "<group>"; };
 		BCF01552240B4600001E6F28 /* FavoritesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoritesCell.xib; sourceTree = "<group>"; };
 		BCF01553240B4600001E6F28 /* FavoritesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesCell.swift; sourceTree = "<group>"; };
+		BCF01556240B4B2E001E6F28 /* GridCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GridCell.xib; sourceTree = "<group>"; };
+		BCF01557240B4B2E001E6F28 /* GridCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridCell.swift; sourceTree = "<group>"; };
+		BCF0155A240B4B3C001E6F28 /* CategoriesSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesSection.swift; sourceTree = "<group>"; };
 		BCF797D12404F35F00B29699 /* NewHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHomeViewController.swift; sourceTree = "<group>"; };
 		BCF797D32404F38500B29699 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		BCF797D52404F40300B29699 /* TitleSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSection.swift; sourceTree = "<group>"; };
@@ -96,8 +102,11 @@
 				BCF797D52404F40300B29699 /* TitleSection.swift */,
 				BCF0154A240B4575001E6F28 /* FeaturedSection.swift */,
 				BCF01550240B45F2001E6F28 /* FavoritesSection.swift */,
+				BCF0155A240B4B3C001E6F28 /* CategoriesSection.swift */,
 				BC50D4C7240857D300659ED8 /* TitleCell.swift */,
 				BC50D4D72408597100659ED8 /* TitleCell.xib */,
+				BCF01557240B4B2E001E6F28 /* GridCell.swift */,
+				BCF01556240B4B2E001E6F28 /* GridCell.xib */,
 				BCF797D32404F38500B29699 /* Section.swift */,
 			);
 			path = View;
@@ -224,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC50D4D82408597100659ED8 /* TitleCell.xib in Resources */,
+				BCF01558240B4B2E001E6F28 /* GridCell.xib in Resources */,
 				BCF01554240B4600001E6F28 /* FavoritesCell.xib in Resources */,
 				BCF0154E240B4594001E6F28 /* FeaturedCell.xib in Resources */,
 				BC8FD6FF23E7BFAC00E9AFC1 /* Assets.xcassets in Resources */,
@@ -239,6 +249,7 @@
 			files = (
 				BCF797D62404F40300B29699 /* TitleSection.swift in Sources */,
 				BC5776642403A00500EFD107 /* OldBoxViewController.swift in Sources */,
+				BCF0155B240B4B3C001E6F28 /* CategoriesSection.swift in Sources */,
 				BC5776682403A3F000EFD107 /* MonthCell.swift in Sources */,
 				BCF01555240B4600001E6F28 /* FavoritesCell.swift in Sources */,
 				BC12E4C323FC63D2003056AB /* LoginViewController.swift in Sources */,
@@ -246,6 +257,7 @@
 				BCF0154B240B4575001E6F28 /* FeaturedSection.swift in Sources */,
 				BC50D4B724084B1300659ED8 /* CircleImage.swift in Sources */,
 				BC50D4BA24084B3500659ED8 /* ContentView.swift in Sources */,
+				BCF01559240B4B2E001E6F28 /* GridCell.swift in Sources */,
 				BCF01551240B45F2001E6F28 /* FavoritesSection.swift in Sources */,
 				BC8FD6FA23E7BFAB00E9AFC1 /* OnboardingViewController.swift in Sources */,
 				BC57766A2403AB2C00EFD107 /* MonthViewController.swift in Sources */,
