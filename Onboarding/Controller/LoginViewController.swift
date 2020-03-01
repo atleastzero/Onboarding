@@ -120,7 +120,7 @@ class LoginViewController: UIViewController {
     }
     
     @objc func goHome() {
-        let navigationController = UINavigationController(rootViewController: HomeViewController())
+        let navigationController = UINavigationController(rootViewController: TabBarController())
         navigationController.isNavigationBarHidden = false
         self.view.window!.rootViewController = navigationController
     }

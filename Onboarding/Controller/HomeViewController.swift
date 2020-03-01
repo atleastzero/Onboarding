@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class HomeViewController: UIViewController {
     
@@ -98,6 +99,8 @@ class HomeViewController: UIViewController {
     }
     
     @objc func goProfile() {
+//        let swiftUIView = ContentView()
+//        let viewController = UIHostingController(rootView: swiftUIView)
     self.navigationController?.pushViewController(NewHomeViewController(), animated: true)
     }
 }

@@ -10,20 +10,13 @@ import UIKit
 
 class NewHomeViewController: UIViewController {
 
-    let collectionView: UICollectionView = {
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .horizontal
-        let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        cv.translatesAutoresizingMaskIntoConstraints = false
-        cv.register(TitleCell.self, forCellWithReuseIdentifier: "cell")
-        return cv
-    }()
+    var collectionView: UICollectionView!
     
     lazy var sections: [Section] = [
         TitleSection(title: "Featured Categories"),
-//        FeaturedSection(),
+        FeaturedSection(),
         TitleSection(title: "Last Month's Favorites"),
-//        FavoritesSection()
+        FavoritesSection()
     ]
     
     lazy var collectionViewLayout: UICollectionViewLayout = {
@@ -42,9 +35,15 @@ class NewHomeViewController: UIViewController {
     }
     
     func setupCollectionView() {
-        view.addSubview(collectionView)
-        collectionView.delegate = self
+        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: collectionViewLayout)
         collectionView.dataSource = self
+        collectionView.delegate = self
+        collectionView.backgroundColor = UIColor.white
+        collectionView.register(UINib(nibName: "TitleCell", bundle: .main), forCellWithReuseIdentifier: TitleCell.identifier)
+       collectionView.register(UINib(nibName: "FeaturedCell", bundle: .main), forCellWithReuseIdentifier: FeaturedCell.identifier)
+        collectionView.register(UINib(nibName: "FavoritesCell", bundle: .main), forCellWithReuseIdentifier: FavoritesCell.identifier)
+        self.view.addSubview(collectionView)
+        collectionView.reloadData()
     }
 //    override func viewDidAppear(_ animated: Bool) {
 //        super.viewDidAppear(animated)
