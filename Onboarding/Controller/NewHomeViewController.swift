@@ -29,7 +29,7 @@ class NewHomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Home 2.0"
+        self.title = "Headquarters"
         self.view.backgroundColor = UIColor.white
         setupCollectionView()
     }
@@ -40,7 +40,7 @@ class NewHomeViewController: UIViewController {
         collectionView.delegate = self
         collectionView.backgroundColor = UIColor.white
         collectionView.register(UINib(nibName: "TitleCell", bundle: .main), forCellWithReuseIdentifier: TitleCell.identifier)
-       collectionView.register(UINib(nibName: "FeaturedCell", bundle: .main), forCellWithReuseIdentifier: FeaturedCell.identifier)
+        collectionView.register(UINib(nibName: "FeaturedCell", bundle: .main), forCellWithReuseIdentifier: FeaturedCell.identifier)
         collectionView.register(UINib(nibName: "FavoritesCell", bundle: .main), forCellWithReuseIdentifier: FavoritesCell.identifier)
         self.view.addSubview(collectionView)
         collectionView.reloadData()

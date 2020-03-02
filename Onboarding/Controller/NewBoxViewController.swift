@@ -27,7 +27,7 @@ class NewBoxViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Compositional Layout"
+        self.title = "New You"
         self.view.backgroundColor = UIColor.white
         setupCollectionView()
     }
