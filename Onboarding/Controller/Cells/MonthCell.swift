@@ -1,15 +1,16 @@
 //
-//  monthCell.swift
+//  MonthCell.swift
 //  Onboarding
 //
-//  Created by Megan OBryan on 2/23/20.
+//  Created by Megan OBryan on 3/2/20.
 //  Copyright © 2020 Makeschool. All rights reserved.
 //
 
 import UIKit
 
 class MonthCell: UITableViewCell {
-    let monthButton: UIButton = {
+    
+    @IBOutlet var monthButton: UIButton! = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitleColor(UIColor.black, for: .normal)
@@ -18,15 +19,22 @@ class MonthCell: UITableViewCell {
         button.backgroundColor = .white
         return button
     }()
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.setup()
+    }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+    }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        self.setup()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        self.setup()
     }
     
     func setup() {

@@ -18,7 +18,6 @@
 		BC50D4C9240857D300659ED8 /* TitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC50D4C7240857D300659ED8 /* TitleCell.swift */; };
 		BC50D4D82408597100659ED8 /* TitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC50D4D72408597100659ED8 /* TitleCell.xib */; };
 		BC5776642403A00500EFD107 /* OldBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5776632403A00500EFD107 /* OldBoxViewController.swift */; };
-		BC5776682403A3F000EFD107 /* MonthCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5776672403A3F000EFD107 /* MonthCell.swift */; };
 		BC57766A2403AB2C00EFD107 /* MonthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5776692403AB2C00EFD107 /* MonthViewController.swift */; };
 		BC8FD6F623E7BFAB00E9AFC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8FD6F523E7BFAB00E9AFC1 /* AppDelegate.swift */; };
 		BC8FD6F823E7BFAB00E9AFC1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8FD6F723E7BFAB00E9AFC1 /* SceneDelegate.swift */; };
@@ -34,6 +33,8 @@
 		BCF01558240B4B2E001E6F28 /* GridCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCF01556240B4B2E001E6F28 /* GridCell.xib */; };
 		BCF01559240B4B2E001E6F28 /* GridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF01557240B4B2E001E6F28 /* GridCell.swift */; };
 		BCF0155B240B4B3C001E6F28 /* CategoriesSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF0155A240B4B3C001E6F28 /* CategoriesSection.swift */; };
+		BCF01560240DA8EF001E6F28 /* MonthCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF0155E240DA8EF001E6F28 /* MonthCell.swift */; };
+		BCF01561240DA8EF001E6F28 /* MonthCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCF0155F240DA8EF001E6F28 /* MonthCell.xib */; };
 		BCF797D22404F35F00B29699 /* NewHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF797D12404F35F00B29699 /* NewHomeViewController.swift */; };
 		BCF797D42404F38500B29699 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF797D32404F38500B29699 /* Section.swift */; };
 		BCF797D62404F40300B29699 /* TitleSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF797D52404F40300B29699 /* TitleSection.swift */; };
@@ -52,7 +53,6 @@
 		BC50D4C7240857D300659ED8 /* TitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCell.swift; sourceTree = "<group>"; };
 		BC50D4D72408597100659ED8 /* TitleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TitleCell.xib; sourceTree = "<group>"; };
 		BC5776632403A00500EFD107 /* OldBoxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldBoxViewController.swift; sourceTree = "<group>"; };
-		BC5776672403A3F000EFD107 /* MonthCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthCell.swift; sourceTree = "<group>"; };
 		BC5776692403AB2C00EFD107 /* MonthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthViewController.swift; sourceTree = "<group>"; };
 		BC8FD6F223E7BFAB00E9AFC1 /* Onboarding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Onboarding.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC8FD6F523E7BFAB00E9AFC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +70,8 @@
 		BCF01556240B4B2E001E6F28 /* GridCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GridCell.xib; sourceTree = "<group>"; };
 		BCF01557240B4B2E001E6F28 /* GridCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridCell.swift; sourceTree = "<group>"; };
 		BCF0155A240B4B3C001E6F28 /* CategoriesSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesSection.swift; sourceTree = "<group>"; };
+		BCF0155E240DA8EF001E6F28 /* MonthCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthCell.swift; sourceTree = "<group>"; };
+		BCF0155F240DA8EF001E6F28 /* MonthCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MonthCell.xib; sourceTree = "<group>"; };
 		BCF797D12404F35F00B29699 /* NewHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHomeViewController.swift; sourceTree = "<group>"; };
 		BCF797D32404F38500B29699 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		BCF797D52404F40300B29699 /* TitleSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSection.swift; sourceTree = "<group>"; };
@@ -165,11 +167,12 @@
 		BCF797D02404F32600B29699 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				BC5776672403A3F000EFD107 /* MonthCell.swift */,
 				BCF0154D240B4594001E6F28 /* FeaturedCell.swift */,
 				BCF0154C240B4594001E6F28 /* FeaturedCell.xib */,
 				BCF01553240B4600001E6F28 /* FavoritesCell.swift */,
 				BCF01552240B4600001E6F28 /* FavoritesCell.xib */,
+				BCF0155E240DA8EF001E6F28 /* MonthCell.swift */,
+				BCF0155F240DA8EF001E6F28 /* MonthCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCF01561240DA8EF001E6F28 /* MonthCell.xib in Resources */,
 				BC50D4D82408597100659ED8 /* TitleCell.xib in Resources */,
 				BCF01558240B4B2E001E6F28 /* GridCell.xib in Resources */,
 				BCF01554240B4600001E6F28 /* FavoritesCell.xib in Resources */,
@@ -250,12 +254,12 @@
 				BCF797D62404F40300B29699 /* TitleSection.swift in Sources */,
 				BC5776642403A00500EFD107 /* OldBoxViewController.swift in Sources */,
 				BCF0155B240B4B3C001E6F28 /* CategoriesSection.swift in Sources */,
-				BC5776682403A3F000EFD107 /* MonthCell.swift in Sources */,
 				BCF01555240B4600001E6F28 /* FavoritesCell.swift in Sources */,
 				BC12E4C323FC63D2003056AB /* LoginViewController.swift in Sources */,
 				BCF797D42404F38500B29699 /* Section.swift in Sources */,
 				BCF0154B240B4575001E6F28 /* FeaturedSection.swift in Sources */,
 				BC50D4B724084B1300659ED8 /* CircleImage.swift in Sources */,
+				BCF01560240DA8EF001E6F28 /* MonthCell.swift in Sources */,
 				BC50D4BA24084B3500659ED8 /* ContentView.swift in Sources */,
 				BCF01559240B4B2E001E6F28 /* GridCell.swift in Sources */,
 				BCF01551240B45F2001E6F28 /* FavoritesSection.swift in Sources */,
