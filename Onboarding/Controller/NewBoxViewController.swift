@@ -37,13 +37,13 @@ class NewBoxViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.backgroundColor = UIColor.white
+       
         collectionView.register(UINib(nibName: "TitleCell", bundle: .main), forCellWithReuseIdentifier: TitleCell.identifier)
-        collectionView.register(UINib(nibName: "FeaturedCell", bundle: .main), forCellWithReuseIdentifier: FeaturedCell.identifier)
-        collectionView.register(UINib(nibName: "FavoritesCell", bundle: .main), forCellWithReuseIdentifier: FavoritesCell.identifier)
         collectionView.register(UINib(nibName: "GridCell", bundle: .main), forCellWithReuseIdentifier: GridCell.identifier)
         self.view.addSubview(collectionView)
         collectionView.reloadData()
     }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         collectionView.reloadData()
@@ -65,6 +65,18 @@ extension NewBoxViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         sections[indexPath.section].configureCell(collectionView: collectionView, indexPath: indexPath)
+    }
+
+    func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+        let cell = collectionView.cellForItem(at: indexPath) as! GridCell
+        if cell.isSelected == true {
+            collectionView.deselectItem(at: indexPath, animated: false)
+            collectionView.delegate?.collectionView?(collectionView, didDeselectItemAt: indexPath)
+            cell.mainView.backgroundColor = UIColor.systemGray
+            return false
+        }
+        cell.mainView.backgroundColor = UIColor.systemBlue
+        return true
     }
 }
 

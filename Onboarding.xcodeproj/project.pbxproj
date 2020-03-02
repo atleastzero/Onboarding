@@ -98,15 +98,15 @@
 		BC12E4C023FC5F0D003056AB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BC50D4C7240857D300659ED8 /* TitleCell.swift */,
+				BC50D4D72408597100659ED8 /* TitleCell.xib */,
+				BCF01557240B4B2E001E6F28 /* GridCell.swift */,
+				BCF01556240B4B2E001E6F28 /* GridCell.xib */,
 				BCE3D29023ECA87C00FE7E4F /* OnboardingPage.swift */,
 				BCF797D52404F40300B29699 /* TitleSection.swift */,
 				BCF0154A240B4575001E6F28 /* FeaturedSection.swift */,
 				BCF01550240B45F2001E6F28 /* FavoritesSection.swift */,
 				BCF0155A240B4B3C001E6F28 /* CategoriesSection.swift */,
-				BC50D4C7240857D300659ED8 /* TitleCell.swift */,
-				BC50D4D72408597100659ED8 /* TitleCell.xib */,
-				BCF01557240B4B2E001E6F28 /* GridCell.swift */,
-				BCF01556240B4B2E001E6F28 /* GridCell.xib */,
 				BCF797D32404F38500B29699 /* Section.swift */,
 			);
 			path = View;
