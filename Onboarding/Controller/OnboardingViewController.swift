@@ -12,7 +12,15 @@ class OnboardingViewController: UIViewController {
 
     var scrollView: UIScrollView!
     var container: UIStackView!
-    var pageControl: UIPageControl!
+    var pageControl: UIPageControl = {
+        let pageControl = UIPageControl()
+        pageControl.currentPage = 0
+        pageControl.pageIndicatorTintColor = UIColor.purple
+        pageControl.currentPageIndicatorTintColor = UIColor.systemPurple
+        pageControl.translatesAutoresizingMaskIntoConstraints = false
+        pageControl.isUserInteractionEnabled = false
+        return pageControl
+    }()
 
     var selfieView: OnboardingPage!
     var surveyView: OnboardingPage!
@@ -68,6 +76,8 @@ class OnboardingViewController: UIViewController {
         
         pagesArray = [selfieView, surveyView, identityView]
         
+        pageControl.numberOfPages = pagesArray.count
+        
         for page in pagesArray{
             container.addArrangedSubview(page)
             page.widthAnchor.constraint(equalToConstant: view.frame.size.width).isActive = true
@@ -75,19 +85,8 @@ class OnboardingViewController: UIViewController {
     }
     
     func setPageControl() {
-        pageControl = UIPageControl()
-        
-        pageControl.currentPage = 0
-        
-        pageControl.pageIndicatorTintColor = UIColor.purple
-        pageControl.currentPageIndicatorTintColor = UIColor.systemPurple
-        
-        pageControl.translatesAutoresizingMaskIntoConstraints = false
-        
-        pageControl.isUserInteractionEnabled = false
-        
         view.addSubview(pageControl)
-        view.bringSubviewToFront(pageControl)
+//        view.bringSubviewToFront(pageControl)
         
         pageControl.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -40).isActive = true
         pageControl.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true

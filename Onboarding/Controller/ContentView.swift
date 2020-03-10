@@ -20,14 +20,14 @@ struct ContentView: View {
                 .padding(.bottom, -130)
             
             VStack(alignment: .leading) {
-                Text("Turtle Rock")
+                Text("Alias Pseudonym")
                     .font(.title)
                     .foregroundColor(.green)
-                HStack {
-                    Text("Joshua Tree National Park")
+                VStack {
+                    Text("Favorite Item: Dentures")
                         .font(.subheadline)
                     Spacer()
-                    Text("California")
+                    Text("Midwest American Accent for 4 years")
                         .font(.subheadline)
                 }
             }

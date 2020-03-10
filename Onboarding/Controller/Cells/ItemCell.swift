@@ -1,26 +1,26 @@
 //
-//  MonthCell.swift
+//  ItemCell.swift
 //  Onboarding
 //
-//  Created by Megan OBryan on 3/2/20.
+//  Created by Megan OBryan on 3/4/20.
 //  Copyright © 2020 Makeschool. All rights reserved.
 //
 
 import UIKit
 
-class MonthCell: UITableViewCell {
+class ItemCell: UITableViewCell {
     
-    var monthButton: UIButton! = {
+    var favoriteButton: UIButton! = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitleColor(UIColor.black, for: .normal)
         button.layer.cornerRadius = 10
         button.layer.masksToBounds = true
-        button.backgroundColor = .white
+        button.backgroundColor = .yellow
         return button
     }()
     
-    var monthLabel: UILabel! = {
+    var itemLabel: UILabel! = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = UIColor.black
@@ -47,14 +47,14 @@ class MonthCell: UITableViewCell {
     }
     
     func setup() {
-        self.contentView.addSubview(monthButton)
-        monthButton.topAnchor.constraint(equalTo: self.contentView.topAnchor).isActive = true
-        monthButton.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor).isActive = true
-        monthButton.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor).isActive = true
-        monthButton.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor).isActive = true
+        self.contentView.addSubview(favoriteButton)
+        favoriteButton.topAnchor.constraint(equalTo: self.contentView.topAnchor).isActive = true
+        favoriteButton.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor).isActive = true
+        favoriteButton.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor).isActive = true
+        favoriteButton.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor).isActive = true
 
-        self.contentView.addSubview(monthLabel)
-        monthLabel.centerYAnchor.constraint(equalToSystemSpacingBelow: self.contentView.centerYAnchor, multiplier: 1.0).isActive = true
-        monthLabel.centerXAnchor.constraint(equalToSystemSpacingAfter: self.contentView.centerXAnchor, multiplier: 1.0).isActive = true
+        self.contentView.addSubview(itemLabel)
+        itemLabel.centerYAnchor.constraint(equalToSystemSpacingBelow: self.contentView.centerYAnchor, multiplier: 1.0).isActive = true
+        itemLabel.centerXAnchor.constraint(equalToSystemSpacingAfter: self.contentView.centerXAnchor, multiplier: 1.0).isActive = true
     }
 }

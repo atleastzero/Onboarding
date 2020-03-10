@@ -9,16 +9,15 @@
 import UIKit
 
 class OldBoxViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
-    let monthArray = ["February 2020", "January 2020", "December 2019"]
-    
+        
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return monthArray.count
+        return boxes.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MonthCell", for: indexPath) as! MonthCell
-        cell.monthButton.setTitle(monthArray[indexPath.row], for: .normal)
+        cell.monthLabel.text = "\(boxes[indexPath.row].date)"
+        cell.monthButton.tag = indexPath.row
         cell.monthButton.addTarget(self, action: #selector(goToBox), for: .touchUpInside)
         return cell
     }
@@ -38,12 +37,12 @@ class OldBoxViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         view.backgroundColor = .blue
         
-        view.addSubview(table)
         setupTableView()
         
     }
     
     func setupTableView() {
+        view.addSubview(table)
         table.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor).isActive = true
         table.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor).isActive = true
         table.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor).isActive = true
@@ -52,7 +51,9 @@ class OldBoxViewController: UIViewController, UITableViewDelegate, UITableViewDa
         table.dataSource = self
     }
 
-    @objc func goToBox() {
-    self.navigationController?.pushViewController(MonthViewController(), animated: true)
+    @objc func goToBox(sender: UIButton) {
+        let vc = MonthViewController(boxes[sender.tag])
+        vc.title = boxes[sender.tag].date
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }

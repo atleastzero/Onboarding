@@ -22,23 +22,18 @@ class TabBarController: UITabBarController {
         let newVC = NewBoxViewController()
         let oldVC = OldBoxViewController()
         let profileVC = UIHostingController(rootView: ContentView())
-        
-        let navHome = setupViewController(homeVC, "Identity HQ")
-        let navNew = setupViewController(newVC, "Transform")
-        let navOld = setupViewController(oldVC, "Other Lives")
-        let navProfile = setupViewController(profileVC, "One Soul")
-//        let navControllerNA = setupViewController("northAmerica", "North America", UIColor.red)
-//        let navControllerSA = setupViewController("southAmerica", "South America", UIColor.orange)
-//        let navControllerAU = setupViewController("australia", "Australia", UIColor.yellow)
-//        let navControllerAF = setupViewController("africa", "Africa", UIColor.green)
-//        let navControllerEU = setupViewController("europe", "Europe", UIColor.blue)
-//        let navControllerAS = setupViewController("asia", "Asia", UIColor.purple)
-//
+
+        let navHome = setupViewController("house", homeVC, "Identity HQ")
+        let navNew = setupViewController("newbox", newVC, "Transform")
+        let navOld = setupViewController("oldbox", oldVC, "Other Lives")
+        let navProfile = setupViewController("person", profileVC, "One Soul")
+
         viewControllers = [navHome, navNew, navOld, navProfile]
     }
     
-    func setupViewController(_ vc: UIViewController, _ title: String) -> UINavigationController {
+    func setupViewController(_ imageName: String, _ vc: UIViewController, _ title: String) -> UINavigationController {
         vc.title = title
+        vc.tabBarItem = UITabBarItem(title: title, image: UIImage(named: imageName), selectedImage: UIImage(named: imageName))
         let navController = UINavigationController(rootViewController: vc)
         return navController
     }

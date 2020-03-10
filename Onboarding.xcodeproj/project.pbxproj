@@ -23,6 +23,7 @@
 		BC8FD6F823E7BFAB00E9AFC1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8FD6F723E7BFAB00E9AFC1 /* SceneDelegate.swift */; };
 		BC8FD6FA23E7BFAB00E9AFC1 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8FD6F923E7BFAB00E9AFC1 /* OnboardingViewController.swift */; };
 		BC8FD6FF23E7BFAC00E9AFC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC8FD6FE23E7BFAC00E9AFC1 /* Assets.xcassets */; };
+		BCB8F19424104D3400B05B71 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB8F19324104D3400B05B71 /* ItemCell.swift */; };
 		BCE3D29123ECA87C00FE7E4F /* OnboardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE3D29023ECA87C00FE7E4F /* OnboardingPage.swift */; };
 		BCF0154B240B4575001E6F28 /* FeaturedSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF0154A240B4575001E6F28 /* FeaturedSection.swift */; };
 		BCF0154E240B4594001E6F28 /* FeaturedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCF0154C240B4594001E6F28 /* FeaturedCell.xib */; };
@@ -34,7 +35,6 @@
 		BCF01559240B4B2E001E6F28 /* GridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF01557240B4B2E001E6F28 /* GridCell.swift */; };
 		BCF0155B240B4B3C001E6F28 /* CategoriesSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF0155A240B4B3C001E6F28 /* CategoriesSection.swift */; };
 		BCF01560240DA8EF001E6F28 /* MonthCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF0155E240DA8EF001E6F28 /* MonthCell.swift */; };
-		BCF01561240DA8EF001E6F28 /* MonthCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCF0155F240DA8EF001E6F28 /* MonthCell.xib */; };
 		BCF797D22404F35F00B29699 /* NewHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF797D12404F35F00B29699 /* NewHomeViewController.swift */; };
 		BCF797D42404F38500B29699 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF797D32404F38500B29699 /* Section.swift */; };
 		BCF797D62404F40300B29699 /* TitleSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF797D52404F40300B29699 /* TitleSection.swift */; };
@@ -60,6 +60,7 @@
 		BC8FD6F923E7BFAB00E9AFC1 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		BC8FD6FE23E7BFAC00E9AFC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC8FD70323E7BFAD00E9AFC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCB8F19324104D3400B05B71 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		BCE3D29023ECA87C00FE7E4F /* OnboardingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPage.swift; sourceTree = "<group>"; };
 		BCF0154A240B4575001E6F28 /* FeaturedSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedSection.swift; sourceTree = "<group>"; };
 		BCF0154C240B4594001E6F28 /* FeaturedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeaturedCell.xib; sourceTree = "<group>"; };
@@ -71,7 +72,6 @@
 		BCF01557240B4B2E001E6F28 /* GridCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridCell.swift; sourceTree = "<group>"; };
 		BCF0155A240B4B3C001E6F28 /* CategoriesSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesSection.swift; sourceTree = "<group>"; };
 		BCF0155E240DA8EF001E6F28 /* MonthCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthCell.swift; sourceTree = "<group>"; };
-		BCF0155F240DA8EF001E6F28 /* MonthCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MonthCell.xib; sourceTree = "<group>"; };
 		BCF797D12404F35F00B29699 /* NewHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHomeViewController.swift; sourceTree = "<group>"; };
 		BCF797D32404F38500B29699 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		BCF797D52404F40300B29699 /* TitleSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSection.swift; sourceTree = "<group>"; };
@@ -121,11 +121,11 @@
 				BC12E4C223FC63D2003056AB /* LoginViewController.swift */,
 				BCF797D92405A47900B29699 /* SimpleTextField.swift */,
 				BC12E4C423FC7268003056AB /* HomeViewController.swift */,
+				BCF797D12404F35F00B29699 /* NewHomeViewController.swift */,
+				BC50D4BB240850B600659ED8 /* TabBarController.swift */,
 				BC1D48D224039B1300ED2DAD /* NewBoxViewController.swift */,
 				BC5776632403A00500EFD107 /* OldBoxViewController.swift */,
 				BC5776692403AB2C00EFD107 /* MonthViewController.swift */,
-				BCF797D12404F35F00B29699 /* NewHomeViewController.swift */,
-				BC50D4BB240850B600659ED8 /* TabBarController.swift */,
 				BC50D4B924084B3500659ED8 /* ContentView.swift */,
 				BC50D4B524084B1300659ED8 /* CircleImage.swift */,
 				BC50D4B624084B1300659ED8 /* MapView.swift */,
@@ -172,7 +172,7 @@
 				BCF01553240B4600001E6F28 /* FavoritesCell.swift */,
 				BCF01552240B4600001E6F28 /* FavoritesCell.xib */,
 				BCF0155E240DA8EF001E6F28 /* MonthCell.swift */,
-				BCF0155F240DA8EF001E6F28 /* MonthCell.xib */,
+				BCB8F19324104D3400B05B71 /* ItemCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -235,7 +235,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCF01561240DA8EF001E6F28 /* MonthCell.xib in Resources */,
 				BC50D4D82408597100659ED8 /* TitleCell.xib in Resources */,
 				BCF01558240B4B2E001E6F28 /* GridCell.xib in Resources */,
 				BCF01554240B4600001E6F28 /* FavoritesCell.xib in Resources */,
@@ -253,6 +252,7 @@
 			files = (
 				BCF797D62404F40300B29699 /* TitleSection.swift in Sources */,
 				BC5776642403A00500EFD107 /* OldBoxViewController.swift in Sources */,
+				BCB8F19424104D3400B05B71 /* ItemCell.swift in Sources */,
 				BCF0155B240B4B3C001E6F28 /* CategoriesSection.swift in Sources */,
 				BCF01555240B4600001E6F28 /* FavoritesCell.swift in Sources */,
 				BC12E4C323FC63D2003056AB /* LoginViewController.swift in Sources */,
